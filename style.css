@@ -1,0 +1,62 @@
+body{
+    background-image: linear-gradient(to right, #ff9966, #ff5e62);
+}
+.parent{
+    background-image: linear-gradient(
+        #77a1d3
+        , 
+        #79cbca
+        );
+}
+.boxstyle,
+.lastbox {
+  flex-basis: 33.3%;
+  height: 25vh;
+  padding: 4rem;
+  border: 5px solid rgb(237, 233, 233);
+  border-radius: 1px;
+}
+
+.fa-x,
+.fa-circle {
+  color: rgb(8, 8, 8);
+  text-shadow: 0px 0px 6px rgba(255,255,255,0.7);
+}
+
+button {
+  background-color: rgb(0, 0, 0) !important;
+  width: 60%;
+  border: 1px solid transparent;
+}
+
+button:hover {
+  background-color: rgb(7, 66, 124) !important;
+  border: 1px solid rgb(0, 0, 0);
+}
+
+.ofcanvas {
+  background-color: rgb(255, 255, 255) !important;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  transition: all 0.5s;
+  color: rgb(0, 0, 0);
+  letter-spacing: 1.5px;
+}
+
+.display {
+  transform: translateY(1000px);
+}
+
+input {
+  display: inline;
+}
+
+.fa-circle,
+.fa-x {
+  font-size: 4rem;
+}
+
+.highlight {
+    background-image: linear-gradient(to right, #ff9966, #ff5e62);
+}

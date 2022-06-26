@@ -1,0 +1,101 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Bootstrap cdn -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous" />
+    <!-- External css -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- JQuery cdn -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <!-- External js -->
+    <script src="function.js"></script>
+    <title>Tic Tac Toe</title>
+</head>
+
+<body>
+    <div class="container h-100 position-relative overflow-hidden">
+        <div class="container parent w-50 mt-5 pt-3 position-absolute " style="left: 25%;height: 80%;">
+            <div class="d-flex text-center">
+                <div id="block1" class="boxstyle border-start-0 border-top-0"></div>
+                <div id="block2" class="boxstyle border-start-0 border-top-0"></div>
+                <div id="block3" class="boxstyle border-end-0 border-start-0 border-top-0"></div>
+            </div>
+            <div class="d-flex text-center">
+                <div id="block4" class="boxstyle border-start-0 border-top-0"></div>
+                <div id="block5" class="boxstyle border-start-0 border-top-0"></div>
+                <div id="block6" class="boxstyle border-end-0 border-start-0 border-top-0"></div>
+            </div>
+            <div class="d-flex text-center">
+                <div id="block7" class="boxstyle border-start-0 border-top-0 border-bottom-0"></div>
+                <div id="block8" class="boxstyle border-start-0 border-top-0 border-bottom-0"></div>
+                <div id="block9" class="boxstyle border-end-0 border-start-0 border-top-0 border-bottom-0 "></div>
+            </div>
+        </div>
+        <div class="position-absolute h-75 w-75 ofcanvas bg-light display text-center" id="canvas"
+            style="left: 15%; top: 10%">
+            <h3 class="display-3 fw-bolder mt-5" style="letter-spacing:2.5px;">
+                Tic-Tac Toe
+                <small class=" d-block fs-5 fw-light">Compete with your friend and win!!!</small>
+            </h3>
+            <form class="w-50 mt-5  mx-auto mb-5">
+                <div class="form-group mt-4 mb-4 w-50 mx-auto">
+                    <input type="name" class="form-control" id="Name1"
+                        placeholder="Enter name of Player 1 ( X )" />
+                </div>
+                <div class="form-group mb-4 w-50 mx-auto">
+                    <input type="name" class="form-control" id="Name2"
+                        placeholder="Enter name of Player 2 ( O )" />
+                </div>
+                <button type="submit" id="submit" class="btn btn-primary w-50">
+                    Submit
+                </button>
+            </form>
+            <small class=" d-block fs-6 fw-light mt-5">Designed by <span class="fw-bold" style="color:red ;">Muhammad Fahad</span></small>
+        </div>
+        <div class="position-absolute h-75 w-75 ofcanvas bg-light display text-center" id="canvas2"
+        style="left: 15%; top: 10%">
+            <h3 class="display-4 fw-bolder mt-5" style="letter-spacing:2.5px;">
+                Congratulations!!!
+            </h3>
+            <h3 class="display-6 fw-lighter mt-4">
+                Muhammad Fahad
+            </h3>
+            <small class="d-block display-6 fw-bold mt-3 mb-5" style="color:green">You Win</small>
+            <div class="vstack gap-2 col-md-5 mx-auto">
+                <button type="button" class="btn btn-secondary mx-auto newgame">New Game</button>
+                <button type="button" class="btn btn-secondary mx-auto restart">Restart</button>
+                <button type="button" class="btn btn-secondary mx-auto exit">Exit</button>
+            </div>
+            <small class=" d-block fs-6 fw-light mt-5">Designed by <span class="fw-bold" style="color:red ;">Muhammad Fahad</span></small>
+        </div>
+        <div id="canvas3" class="position-absolute h-75 w-75 ofcanvas bg-light display text-center" id="canvas2"
+        style="left: 15%; top: 10%">
+            <h3 class="display-4 fw-bolder mt-5" style="letter-spacing:2.5px;">
+                Tough One Guys
+            </h3>
+            <h3 class="display-6 fw-lighter mt-4 mb-5">
+                It is a <small class=" display-6 fw-bold mt-3 mb-5" style="color:green">Draw</small>
+            </h3>
+            <div class="vstack gap-2 col-md-5 mx-auto mb-5">
+                <button type="button" class="btn btn-secondary mx-auto newgame">New Game</button>
+                <button type="button" class="btn btn-secondary mx-auto restart">Restart</button>
+                <button type="button" class="btn btn-secondary mx-auto exit">Exit</button>
+            </div>
+            <small class=" d-block fs-6 fw-light mt-5">Designed by <span class="fw-bold" style="color:red ;">Muhammad Fahad</span></small>
+        </div>
+    </div>
+    <script src="https://kit.fontawesome.com/69ee489e1c.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
